@@ -4,14 +4,14 @@ $color-review-primary: #444444;
 
 .movie__container__content {
   padding-left: 10px;
+  height: calc(100% - 120px);
+  overflow: auto;
 }
-
 .movie__grid {
   display: grid;
   grid-template-columns: 0.6fr 0.75fr 0.55fr;
   grid-template-rows: 0.7fr;
   grid-template-areas: 'image container';
-  height: 80%;
   margin-left: 10px;
   margin-bottom: 20px;
 }
@@ -129,4 +129,34 @@ $color-review-primary: #444444;
   font-size: 24px;
   height: 27px;
   width: 415px;
+}
+
+@for $i from 1 through 5 {
+  .rating__bar-#{$i} {
+    i {
+      color: $color-review-negative;
+      font-size: 20px;
+      margin-left: 5px;
+
+      &:nth-child(-n + #{$i}) {
+        color: $color-review-positive;
+      }
+    }
+
+    &::before {
+      margin-left: 20px;
+      display: inline-block;
+      content: '';
+      margin-bottom: 10px;
+      height: 10px;
+      width: 300px;
+      border-radius: 5px;
+      background-image: linear-gradient(
+        to left,
+        $color-review-negative calc(100% - (20% * #{$i})),
+        $color-review-positive calc(100% - (20% * #{$i})),
+        $color-review-positive calc(20% * #{$i})
+      );
+    }
+  }
 }
