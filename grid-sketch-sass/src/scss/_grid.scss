@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr 320px;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'sidebar container cart';
+  height: 100%;
+}
+
+.category {
+  background-color: $color-white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  width: 46%;
+  min-width: 300px;
+  max-width: 450px;
+}
+
+.category img {
+  width: 100%;
+}
+
+.category__content {
+  padding: 25px;
+}
+
+.category__link {
+  color: $color-neutral;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.category__link:hover {
+  color: $color-primary;
+}
+
+.category__link:first-of-type {
+  margin-top: 25px;
+}
+
+.category__link:last-child {
+  margin-bottom: 0;
+}

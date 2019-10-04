@@ -1,0 +1,90 @@
+$color-primary: #0000a4;
+$color-neutral: #444;
+$color-black: #000;
+$color-black-transparent: #0000a411;
+$color-white: #fff;
+$font-family: 'Source Sans Pro', sans-serif;
+$header-height: 100px;
+
+@import './grid';
+@import './sidebar';
+@import './navigation';
+@import './cart';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900&display=swap');
+@import './movie';
+
+html,
+body {
+  background-color: $color-white;
+  font-family: $font-family;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.button {
+  background-color: $color-primary;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 120px;
+}
+
+.button:hover {
+  background-color: $color-black;
+}
+
+.button--full {
+  width: 100%;
+}
+
+.container {
+  grid-area: container;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.container__header {
+  align-items: center;
+  display: flex;
+  height: $header-height;
+  justify-content: space-between;
+  padding: 0 25px;
+  color: $color-primary;
+}
+
+.shopping-badge {
+  display: none;
+}
+.container__content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: calc(100% - #{$header-height});
+  padding: 0 25px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@import './ipad';
+@import './mobile';

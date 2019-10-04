@@ -1,0 +1,132 @@
+$color-review-positive: #ffca00;
+$color-review-negative: #aaaaaa;
+$color-review-primary: #444444;
+
+.movie__container__content {
+  padding-left: 10px;
+}
+
+.movie__grid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.75fr 0.55fr;
+  grid-template-rows: 0.7fr;
+  grid-template-areas: 'image container';
+  height: 80%;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.new__price__number {
+  &::after {
+    content: ',';
+    display: inline-block;
+  }
+}
+
+.old__price__number,
+.old__price__decimal {
+  color: #444444;
+  text-decoration: line-through;
+}
+
+.movie__image__container {
+  width: 300px;
+  height: 380px;
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: image;
+  padding-right: 3%;
+  padding-left: 3%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #b3aaaa7a;
+}
+
+.movie__image {
+  height: 313.87px;
+  width: 250px;
+}
+
+.movie__price {
+  color: #18b32c;
+  grid-area: container;
+  margin-left: 5%;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.movie__description {
+  margin-top: 60px;
+  height: 322px;
+  width: 402px;
+
+  font-size: 14px;
+  margin-left: 5%;
+  grid-area: container;
+}
+
+.movie__rating {
+  margin-top: 10px;
+  position: relative;
+  width: 200px;
+  left: -150px;
+
+  i {
+    color: $color-review-positive;
+    font-size: 20px;
+
+    &:nth-child(5) {
+      color: $color-review-negative;
+    }
+  }
+}
+
+.review__rating {
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: 50px;
+    margin-right: 20px;
+    color: $color-review-primary;
+  }
+  i {
+    color: $color-review-positive;
+    font-size: 20px;
+
+    &:nth-child(6) {
+      color: $color-review-negative;
+    }
+  }
+}
+
+.review__button {
+  color: $color-primary;
+  border-color: $color-primary;
+  background-color: $color-white;
+}
+
+.review__summary {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    color: $color-review-primary;
+  }
+
+  .review__button {
+    margin-left: 20px;
+    height: 40px;
+    width: 110px;
+  }
+}
+
+.review__text {
+  font-family: Baskerville;
+  line-height: 27px;
+  color: $color-primary;
+  font-style: italic;
+  font-size: 24px;
+  height: 27px;
+  width: 415px;
+}

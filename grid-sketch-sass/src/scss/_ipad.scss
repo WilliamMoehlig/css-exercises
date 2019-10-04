@@ -1,0 +1,136 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'sidebar container';
+    height: 100%;
+  }
+
+  .container {
+    background-color: #f0f0f0;
+  }
+
+  .cart {
+    display: none;
+  }
+
+  .cart__open {
+    display: block;
+    position: absolute;
+    background-color: $color-white;
+    color: $color-primary;
+    width: 250px;
+    right: 30px;
+    top: 80px;
+    padding: 10px;
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      right: 20px;
+      top: -10px;
+      position: absolute;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid $color-white;
+    }
+  }
+
+  .cart__header {
+    height: 50px;
+  }
+
+  .cart__container {
+    background-color: $color-white;
+  }
+
+  .cart__footer {
+    background-color: $color-white;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .cart__footer .button--full {
+    width: 80%;
+  }
+  .navigation {
+    padding-left: 6px;
+  }
+  .sidebar__logo {
+    display: none;
+  }
+
+  .sidebar__header {
+    padding: 0 8px;
+  }
+  .navigation__text {
+    display: none;
+  }
+
+  .sidebar__home {
+    margin-right: 0;
+    padding-top: 2px;
+  }
+
+  .navigation__content:not(:only-child)::after {
+    display: none;
+  }
+
+  .navigation__item .navigation__item--active .navigation__subitems {
+    display: none;
+  }
+
+  .navigation__item--active > .navigation__content {
+    border-color: transparent;
+    background-color: $color-white;
+  }
+
+  .shopping-badge {
+    display: block;
+    margin-left: 15px;
+    font-size: 28px;
+  }
+
+  .shopping-badge::after {
+    font-family: $font-family;
+    position: absolute;
+    background-color: #a9ffb4;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    margin-top: -11px;
+    margin-left: 13px;
+    font-size: 18px;
+    border-radius: 50%;
+    content: '1';
+  }
+
+  .navigation__subitems .navigation__content {
+    padding-left: 10px;
+  }
+
+  .navigation__subitems {
+    border: none;
+    background-color: $color-white;
+  }
+
+  .category {
+    background-color: $color-white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    width: 300px;
+  }
+
+  .container__header h1 {
+    display: flex;
+    flex-grow: 1;
+  }
+}
